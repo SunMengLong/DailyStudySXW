@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_error"
+        android:src="@mipmap/w"
+        android:layout_width="550px"
+        android:layout_height="550px" />
+    <TextView
+        android:textColor="#ccc"
+        android:gravity="center"
+        android:text="主人，您的信号好像被吃掉了"
+        android:background="#fff"
+        android:id="@+id/error_but"
+        android:layout_below="@id/iv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:textColor="#323232"
+        android:layout_gravity="center"
+        android:id="@+id/bt_reload"
+        android:background="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/error_but"
+        android:layout_width="wrap_content"
+        android:text="点击刷新！"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</RelativeLayout>

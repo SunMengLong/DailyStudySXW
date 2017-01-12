@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <RadioGroup
+        android:id="@+id/circle_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:textColor="#f00"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:button="@null"
+            android:id="@+id/huati"
+            android:text="话题"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:textSize="25sp"
+            android:gravity="center"
+            android:button="@null"
+            android:id="@+id/remen"
+            android:text="热门"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:textSize="25sp"
+            android:gravity="center"
+            android:button="@null"
+            android:id="@+id/guanzhu"
+            android:text="关注"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </RadioGroup>
+    <FrameLayout
+        android:id="@+id/jintai_framlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"/>
+</LinearLayout>
