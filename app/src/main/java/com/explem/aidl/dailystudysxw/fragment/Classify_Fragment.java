@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.explem.aidl.dailystudysxw.R;
+import com.explem.aidl.dailystudysxw.application.MyApplication;
 
 /**
  * Created by Pooh on 2017/1/11.
@@ -25,6 +26,8 @@ public class Classify_Fragment extends Fragment{
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.fenlei_framlayout,new ClassifyFragmentLiMian());
         fragmentTransaction.commit();
+
+        MyApplication.direction2=-1;
         return vv;
     }
 }

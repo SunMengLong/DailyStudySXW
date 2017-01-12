@@ -4,6 +4,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.explem.aidl.dailystudysxw.application.MyApplication;
 import com.explem.aidl.dailystudysxw.base.BaseFragment;
 import com.explem.aidl.dailystudysxw.utils.BaseDate;
 import com.explem.aidl.dailystudysxw.view.ShowingPage;
@@ -26,6 +27,7 @@ public class Mine_Fragment extends BaseFragment{
         tv.setTextSize(20);
         //请求网络的数据
         initData();
+        MyApplication.direction2=2;
         return tv;
     }
 

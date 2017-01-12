@@ -4,6 +4,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.explem.aidl.dailystudysxw.application.MyApplication;
 import com.explem.aidl.dailystudysxw.base.BaseFragment;
 import com.explem.aidl.dailystudysxw.utils.BaseDate;
 import com.explem.aidl.dailystudysxw.view.ShowingPage;
@@ -21,8 +22,10 @@ public class Home_Fragment extends BaseFragment{
 
     @Override
     protected View createSuccessView() {
-         TextView tv=new TextView(getActivity());
+        //判断“圈子”界面将要显示的是哪一个界面
+        MyApplication.direction2=-1;
 
+         TextView tv=new TextView(getActivity());
         new BaseDate() {
             @Override
             protected void setResultError(ShowingPage.StateType stateLoadError) {

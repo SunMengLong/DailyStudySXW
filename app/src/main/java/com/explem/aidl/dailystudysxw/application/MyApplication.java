@@ -23,6 +23,9 @@ public class MyApplication extends Application{
     //判断要显示的是哪一个
     public static boolean myFlag=false;
 
+    //判断Vp的滑动方向
+    public static int direction2=-1;
+
     @Override
     public void onCreate() {
         super.onCreate();

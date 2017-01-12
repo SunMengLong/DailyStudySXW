@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.explem.aidl.dailystudysxw.R;
 
@@ -33,12 +34,13 @@ public class Circle_Fragment extends Fragment implements RadioGroup.OnCheckedCha
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.jintai_framlayout,new CircleFagmentLiMian());
         fragmentTransaction.commit();
+
+        Toast.makeText(getActivity(), "....", Toast.LENGTH_SHORT).show();
         return vv;
     }
-
     private void initView() {
         circle_rg = (RadioGroup) vv.findViewById(R.id.circle_rg);
-        //改变监听
+        //改变的监听
         circle_rg.setOnCheckedChangeListener(this);
     }
 
