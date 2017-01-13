@@ -1,6 +1,5 @@
 package com.explem.aidl.dailystudysxw.fragment;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import com.explem.aidl.dailystudysxw.R;
 
@@ -34,8 +32,6 @@ public class Circle_Fragment extends Fragment implements RadioGroup.OnCheckedCha
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.jintai_framlayout,new CircleFagmentLiMian());
         fragmentTransaction.commit();
-
-        Toast.makeText(getActivity(), "....", Toast.LENGTH_SHORT).show();
         return vv;
     }
     private void initView() {
@@ -49,10 +45,7 @@ public class Circle_Fragment extends Fragment implements RadioGroup.OnCheckedCha
         for (int j = 0; j < circle_rg.getChildCount(); j++) {
             RadioButton rb= (RadioButton) circle_rg.getChildAt(j);
             if(i==circle_rg.getChildAt(j).getId()){
-                rb.setTextColor(Color.RED);
                 CircleFagmentLiMian.setCur(j);
-            }else{
-                rb.setTextColor(Color.BLACK);
             }
         }
     }
@@ -62,9 +55,9 @@ public class Circle_Fragment extends Fragment implements RadioGroup.OnCheckedCha
         for (int j = 0; j < circle_rg.getChildCount(); j++) {
             RadioButton rb= (RadioButton) circle_rg.getChildAt(j);
             if(i==j){
-                rb.setTextColor(Color.RED);
+                rb.setChecked(true);
             }else{
-                rb.setTextColor(Color.BLACK);
+                rb.setChecked(false);
             }
         }
     }

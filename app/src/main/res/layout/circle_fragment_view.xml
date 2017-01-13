@@ -3,41 +3,74 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    
-    <RadioGroup
-        android:id="@+id/circle_rg"
+
+    <RelativeLayout
+        android:padding="15px"
+        android:background="@color/fenhong"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <RadioButton
-            android:textColor="#f00"
-            android:textSize="25sp"
-            android:gravity="center"
-            android:button="@null"
-            android:id="@+id/huati"
-            android:text="话题"
-            android:layout_width="0px"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginLeft="10px"
+            android:layout_centerVertical="true"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:src="@mipmap/renjia"/>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10px"
+            android:layout_centerVertical="true"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:src="@mipmap/seach"/>
+        <RadioGroup
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="100px"
+            android:layout_marginRight="100px"
+            android:id="@+id/circle_rg"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-        <RadioButton
-            android:textSize="25sp"
-            android:gravity="center"
-            android:button="@null"
-            android:id="@+id/remen"
-            android:text="热门"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-        <RadioButton
-            android:textSize="25sp"
-            android:gravity="center"
-            android:button="@null"
-            android:id="@+id/guanzhu"
-            android:text="关注"
-            android:layout_width="0px"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-    </RadioGroup>
+            android:orientation="horizontal">
+            <RadioButton
+                android:drawableRight="@mipmap/leftxian"
+                android:checked="true"
+                android:drawableBottom="@drawable/xian"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:button="@null"
+                android:id="@+id/huati"
+                android:text="话题"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <RadioButton
+                android:drawableRight="@mipmap/leftxian"
+                android:textColor="#fff"
+                android:drawableBottom="@drawable/xian"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:button="@null"
+                android:id="@+id/remen"
+                android:text="热门"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <RadioButton
+                android:drawableBottom="@drawable/xian"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:button="@null"
+                android:id="@+id/guanzhu"
+                android:text="关注"
+                android:layout_width="wrap_content"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </RadioGroup>
+    </RelativeLayout>
+    
+
     <FrameLayout
         android:id="@+id/jintai_framlayout"
         android:layout_width="match_parent"

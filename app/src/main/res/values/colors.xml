@@ -2,6 +2,7 @@
 <resources>
 
     <color name="white">#fff</color>
+    <color name="fenhong">#F95D51</color>
     <color name="black">#333333</color>
     <color name="loading">#999999</color>
     <color name="green">#40AA53</color>
