@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_fragment_titlev"
+        android:background="#f95d51">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="80px"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/aboat" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/home_fragment_images"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10px"
+            android:src="@mipmap/search" />
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/home_fragment_spring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <ScrollView
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    
+
+
+                    <com.zhy.autolayout.AutoRelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/home_fragment_lunbo"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/home_fragment_titlessss"></android.support.v4.view.ViewPager>
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:id="@+id/ll_doc"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/home_fragment_titless"
+                            android:layout_alignBottom="@id/home_fragment_lunbo"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingRight="10px"></com.zhy.autolayout.AutoLinearLayout>
+                    </com.zhy.autolayout.AutoRelativeLayout>
+
+                    <com.explem.aidl.dailystudysxw.view.MyGridView
+                        android:listSelector="#00000000"
+                        android:id="@+id/home_fragment_gv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/home_fragment_titlesss"
+                        android:layout_gravity="center"
+                        android:background="@color/text_normal_colors"
+                        android:gravity="center"
+                        android:numColumns="3"></com.explem.aidl.dailystudysxw.view.MyGridView>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_fragment_titlessss"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/home_fragment_silu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5px"
+                                android:layout_marginTop="20px"
+                                android:textColor="#f00"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/home_fragment_siwei"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5px"
+                                android:textColor="@color/gray"
+                                android:textSize="10sp" />
+
+                            <ImageView
+                                android:id="@+id/home_fragment_head"
+                                android:layout_width="700px"
+                                android:layout_height="300px"
+                                android:layout_gravity="center" />
+
+                        </com.zhy.autolayout.AutoLinearLayout>
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="1px"
+                            android:layout_height="@dimen/home_fragment_titlessss"
+                            android:background="@color/gray"></com.zhy.autolayout.AutoLinearLayout>
+
+                        <com.zhy.autolayout.AutoRelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/home_fragment_titlessss"
+                            android:layout_weight="1">
+
+                            <com.zhy.autolayout.AutoRelativeLayout
+                                android:id="@+id/home_fragment_rel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="200px">
+
+                                <TextView
+                                    android:id="@+id/run"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10px"
+                                    android:layout_marginTop="20px"
+                                    android:textColor="#00f"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/wondeful"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/run"
+                                    android:layout_marginLeft="10px"
+                                    android:textSize="10sp" />
+
+                                <ImageView
+                                    android:id="@+id/run_img"
+                                    android:layout_width="300px"
+                                    android:layout_height="300px"
+                                    android:layout_alignTop="@id/run"
+                                    android:layout_marginLeft="200px"
+                                    android:layout_toRightOf="@id/run" />
+
+                                <TextView
+                                    android:layout_width="500px"
+                                    android:layout_height="1px"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="@color/gray"></TextView>
+                            </com.zhy.autolayout.AutoRelativeLayout>
+
+                            <com.zhy.autolayout.AutoRelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="200px"
+                                android:layout_below="@id/home_fragment_rel">
+
+                                <TextView
+                                    android:id="@+id/siwei"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10px"
+                                    android:layout_marginTop="20px"
+                                    android:textColor="#ffd306"
+                                    android:textSize="15sp" />
+
+                                <TextView
+                                    android:id="@+id/open_heand"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/siwei"
+                                    android:layout_marginLeft="10px"
+                                    android:textSize="10sp" />
+
+                                <ImageView
+                                    android:id="@+id/bulb"
+                                    android:layout_width="300px"
+                                    android:layout_height="300px"
+                                    android:layout_alignTop="@id/siwei"
+                                    android:layout_marginLeft="200px"
+                                    android:layout_toRightOf="@id/siwei" />
+                            </com.zhy.autolayout.AutoRelativeLayout>
+                        </com.zhy.autolayout.AutoRelativeLayout>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/gray" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5px"
+                        android:background="@color/gray" />
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="100px"
+                            android:layout_height="70px"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20px"
+                            android:src="@mipmap/hot" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="3px"
+                            android:text="热门课程"
+                            android:textSize="20sp" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/gray"/>
+                    <!--将点击的颜色清楚-->
+                        <com.explem.aidl.dailystudysxw.view.MyGridView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:listSelector="#00000000"
+                            android:id="@+id/hot_gv"
+                            android:numColumns="2"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5px"
+                        android:background="@color/gray" />
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="100px"
+                   >
+                   <ImageView
+                       android:layout_alignParentLeft="true"
+                       android:layout_width="300px"
+                       android:layout_height="70px"
+                        android:layout_centerVertical="true"
+                       android:src="@mipmap/recommend"
+                       android:layout_marginLeft="10px"
+                   />
+               </RelativeLayout>
+                <com.explem.aidl.dailystudysxw.view.MyGridView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:numColumns="2"
+                    android:listSelector="#00000000"
+                    android:id="@+id/director_gv"></com.explem.aidl.dailystudysxw.view.MyGridView>
+                <com.explem.aidl.dailystudysxw.view.MyGridView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:listSelector="#00000000"
+                    android:id="@+id/tuijian_lv"
+                    android:layout_marginTop="20px"
+                    android:padding="20px"></com.explem.aidl.dailystudysxw.view.MyGridView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3px"
+                    android:background="@color/gray"
+                    />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        >
+                        <ImageView
+                            android:layout_alignParentLeft="true"
+                            android:layout_width="300px"
+                            android:layout_height="70px"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/study2"
+                            android:layout_marginLeft="10px"
+                            />
+                    </RelativeLayout>
+                    <com.explem.aidl.dailystudysxw.view.MyGridView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:listSelector="#00000000"
+                        android:id="@+id/everyonestudy"
+                        android:layout_marginTop="20px"
+                        android:padding="20px"></com.explem.aidl.dailystudysxw.view.MyGridView>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </ScrollView>
+    </com.liaoinstan.springview.widget.SpringView>
+</com.zhy.autolayout.AutoLinearLayout>
