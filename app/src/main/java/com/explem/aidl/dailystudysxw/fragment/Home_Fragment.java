@@ -30,7 +30,7 @@ public class Home_Fragment extends BaseFragment{
             }
             @Override
             public void setResultData(String data) {
-                Toast.makeText(getActivity(), data, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getActivity(), data, Toast.LENGTH_SHORT).show();
             }
         }.getDate(true,true,"http://japi.juhe.cn/","http://japi.juhe.cn/qqevaluate/qq?key=96efc220a4196fafdfade0c9d1e897ac&qq=295424589",0,BaseDate.NOTIME,BaseDate.getData,null);
         tv.setText("这个是主页！");

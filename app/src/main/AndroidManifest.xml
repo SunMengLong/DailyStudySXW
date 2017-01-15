@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.explem.aidl.dailystudysxw">
+          package="com.explem.aidl.dailystudysxw">
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".application.MyApplication"
         android:allowBackup="true"
@@ -10,25 +12,31 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <!--洪阳的屏幕适配-->
+
+        <!-- 洪阳的屏幕适配 -->
         <meta-data
             android:name="design_width"
-            android:value="1080" />
+            android:value="768"/>
         <meta-data
             android:name="design_height"
-            android:value="1920" />
-        <!--Glid加载图片-->
+            android:value="1280"/>
+        <!-- Glid加载图片 -->
         <meta-data
             android:name="com.explem.aidl.dailystudysxw.utils.GlideModelConfig"
-            android:value="GlideModule" />
+            android:value="GlideModule"/>
+
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".base.BaseActivity"></activity>
+        <activity android:name=".base.BaseActivity"/>
+        <activity android:name=".login_regist.LoginActivity">
+        </activity>
+        <activity android:name=".login_regist.RegistActivity">
+        </activity>
     </application>
 
 </manifest>

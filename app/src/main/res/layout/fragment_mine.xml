@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="match_parent"
+                                     android:orientation="vertical">
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@mipmap/my"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="我的主页"
+            android:textColor="#ffffff"
+            android:textSize="36px"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/autoll_fragment_mine_top"
+        android:layout_width="match_parent"
+        android:layout_height="290px"
+        android:background="@mipmap/my2">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="95px"
+            android:layout_marginTop="60px"
+            android:src="@mipmap/head"
+            app:civ_border_color="#3fffffff"
+            app:civ_border_width="4px"/>
+
+        <!--没有登录的时候-->
+        <com.zhy.autolayout.AutoLinearLayout
+
+            android:id="@+id/ll_my_unloged_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="53px">
+            <TextView
+                android:id="@+id/My_top_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="85px"
+                android:background="@mipmap/landingbutton"
+                android:focusable="false"
+                android:gravity="center"
+                android:padding="10px"
+                android:text="立即登录"
+                android:textColor="#ffffff"
+                android:textSize="36px"/>
+            <TextView
+                android:id="@+id/account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="22px"
+                android:text="登陆后可云同步课程"
+                android:textColor="#ffffff"
+                android:textSize="24px"/>
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <!--登录以后-->
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_my_logedin_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:id="@+id/tv_my_logedin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="5px"
+                android:singleLine="true"
+                android:text="编辑昵称"
+                android:textColor="#ffffff"
+                android:textSize="24px"/>
+
+            <ImageView
+                android:id="@+id/my_log_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="9px"
+                android:paddingRight="10px"
+
+                android:src="@mipmap/myrig"/>
+        </RelativeLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/autoll_fragment_mine_mycourse"
+        android:layout_width="match_parent"
+        android:layout_height="103px"
+        android:gravity="center_vertical"
+        android:paddingLeft="38px"
+        android:paddingRight="38px">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/mya"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="22px"
+            android:drawableRight="@mipmap/myrig"
+            android:gravity="center_vertical"
+            android:text="我的课程"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="38px"
+        android:background="#c9c9c9"
+        />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/autoll_fragment_mine_collections"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical"
+        android:paddingLeft="38px"
+        android:paddingRight="38px">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/myb"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="22px"
+            android:drawableRight="@mipmap/myrig"
+            android:gravity="center_vertical"
+            android:text="收藏"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="38px"
+        android:background="#c9c9c9"
+        />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/autoll_fragment_mine_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical"
+        android:paddingLeft="38px"
+        android:paddingRight="38px">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/myc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="22px"
+            android:drawableRight="@mipmap/myrig"
+            android:gravity="center_vertical"
+            android:text="优惠券"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="38px"
+        android:background="#c9c9c9"
+        />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/autoll_fragment_mine_message"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical"
+        android:paddingLeft="38px"
+        android:paddingRight="38px">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/myd"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="22px"
+            android:drawableRight="@mipmap/myrig"
+            android:gravity="center_vertical"
+            android:text="我的消息"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="38px"
+        android:background="#c9c9c9"
+        />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/autoll_fragment_mine_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical"
+        android:paddingLeft="38px"
+        android:paddingRight="38px">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/mye"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="22px"
+            android:drawableRight="@mipmap/myrig"
+            android:gravity="center_vertical"
+            android:text="意见反馈"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="38px"
+        android:background="#c9c9c9"
+        />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:id="@+id/autoll_fragment_mine_setting"
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center_vertical"
+        android:paddingLeft="38px"
+        android:paddingRight="38px">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/myf"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="22px"
+            android:drawableRight="@mipmap/myrig"
+            android:gravity="center_vertical"
+            android:text="设置"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="38px"
+        android:background="#c9c9c9"
+        />
+
+</com.zhy.autolayout.AutoLinearLayout>
