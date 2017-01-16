@@ -75,8 +75,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private void login() {
         HashMap<String, String> map = new HashMap<>();
         //用户名及密码
-        map.put("userName", "15801308131");
-        map.put("password", "918273465");
+        map.put("userName", tv_activity_login_phone.getText().toString().trim());
+        map.put("password", tv_activity_login_password.getText().toString().trim());
         map.put("dosubmit", "1");
         new BaseDate() {
             @Override
