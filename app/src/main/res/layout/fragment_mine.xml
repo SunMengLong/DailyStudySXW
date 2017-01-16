@@ -38,7 +38,7 @@
 
         <!--没有登录的时候-->
         <com.zhy.autolayout.AutoLinearLayout
-
+            android:visibility="gone"
             android:id="@+id/ll_my_unloged_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,7 +69,7 @@
 
         <!--登录以后-->
         <RelativeLayout
-            android:visibility="gone"
+
             android:id="@+id/rl_my_logedin_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -79,9 +79,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20px"
-                android:layout_marginTop="5px"
                 android:singleLine="true"
-                android:text="编辑昵称"
+                android:text="默认放电话号码"
                 android:textColor="#ffffff"
                 android:textSize="24px"/>
 
@@ -93,7 +92,6 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="9px"
                 android:paddingRight="10px"
-
                 android:src="@mipmap/myrig"/>
         </RelativeLayout>
     </com.zhy.autolayout.AutoLinearLayout>

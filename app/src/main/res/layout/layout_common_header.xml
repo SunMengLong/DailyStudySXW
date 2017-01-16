@@ -9,6 +9,7 @@
         android:orientation="horizontal"
         android:background="#f95d51">
         <ImageView
+            android:id="@+id/iv_common_header_back"
             android:layout_marginLeft="20px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
