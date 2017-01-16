@@ -18,5 +18,5 @@
     <color name="transparent">#00000000</color>
     <color name="course_detail_bg">#525252</color>
     <color name="text_normal_color">#666666</color>
-
+    <color name="text_normal_colors">#f0f0f0</color>
 </resources>

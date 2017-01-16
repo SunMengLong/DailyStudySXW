@@ -5,6 +5,8 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Process;
 
+import java.util.ArrayList;
+
 /**
  * Created by Pooh on 2017/1/10.
  */
@@ -25,6 +27,9 @@ public class MyApplication extends Application{
 
     //判断Vp的滑动方向
     public static int direction2=-1;
+
+    //圈子界面的title
+    public static ArrayList<String> listTitle=new ArrayList<>();
 
     @Override
     public void onCreate() {

@@ -40,7 +40,7 @@ import java.util.HashMap;
  * Created by Pooh on 2017/1/10.
  */
 
-public class Home_Fragment extends BaseFragment implements SpringView.OnFreshListener {
+public class Home_Fragment extends BaseFragment implements SpringView.OnFreshListener, View.OnClickListener {
     private PopupWindow pop;
     private TextView tv;
     private int main_tag = 0;
@@ -150,6 +150,7 @@ public class Home_Fragment extends BaseFragment implements SpringView.OnFreshLis
             Glide.with(getActivity()) .load(home_fragment_main.getData().getAdlist().get(2).getImg()) .into(bulb);
         }
     };
+    private ImageView first_img;
 
 
     @Override
@@ -256,7 +257,7 @@ public class Home_Fragment extends BaseFragment implements SpringView.OnFreshLis
             public void run() {
                 super.run();
                 popView = View.inflate(getActivity(), R.layout.home_fragment_pop, null);
-                pop = new PopupWindow(popView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                pop = new PopupWindow(popView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 pop.setOutsideTouchable(true);
                 pop.setBackgroundDrawable(new BitmapDrawable());
                 //使pop隐藏
@@ -288,5 +289,10 @@ public class Home_Fragment extends BaseFragment implements SpringView.OnFreshLis
     public void onPause() {
         super.onPause();
        h.removeCallbacksAndMessages(null);
+    }
+
+    @Override
+    public void onClick(View view) {
+        first_img.setVisibility(View.GONE);
     }
 }

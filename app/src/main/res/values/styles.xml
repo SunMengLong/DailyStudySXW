@@ -61,5 +61,9 @@
         <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item><!-- 窗口样式Dialog -->
         <item name="android:backgroundDimEnabled">true</item><!--模糊-->     
     </style>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">@dimen/text_16_sp</item>
+    </style>
     
 </resources>

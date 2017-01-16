@@ -17,8 +17,19 @@
     <dimen name="about_title_margin">30dp</dimen>
     <dimen name="course_detail_pic_width">190dp</dimen>
     <dimen name="course_detail_pic_height">115dp</dimen>
-    
-    
-     <dimen name="home_fragment_image">97dp</dimen>
+
+
+    <dimen name="home_fragment_image">97dp</dimen>
+
+
+    <dimen name="home_fragment_images">50px</dimen>
+    <dimen name="home_fragment_lunbo">200px</dimen>
+    <dimen name="home_fragment_title">100px</dimen>
+    <dimen name="home_fragment_titlev">150px</dimen>
+    <dimen name="home_fragment_titless">40px</dimen>
+    <dimen name="home_fragment_titles">300px</dimen>
+    <dimen name="home_fragment_titlesss">350px</dimen>
+    <dimen name="home_fragment_titlessss">400px</dimen>
+    <dimen name="text_16_sp">18sp</dimen>
 
 </resources>
