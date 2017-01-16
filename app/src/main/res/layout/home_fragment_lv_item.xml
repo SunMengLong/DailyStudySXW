@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+    android:padding="20px"
+android:layout_height="250px">
+
+<ImageView
+    android:layout_marginTop="30px"
+    android:id="@+id/tuijian_lv_img"
+    android:layout_width="300px"
+    android:layout_height="200px"
+    android:src="@drawable/ic_launcher"/>
+    <TextView
+        android:textSize="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tuijian_lv_name"
+        android:layout_alignTop="@id/tuijian_lv_img"
+        android:layout_toRightOf="@id/tuijian_lv_img"
+
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/school_name"
+            android:textSize="10sp"
+            android:layout_alignLeft="@id/tuijian_lv_name"
+            android:layout_centerVertical="true"
+       />
+          <TextView
+              android:textSize="10sp"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/tuijian_lv_price"
+              android:layout_marginLeft="5px"
+              android:layout_alignLeft="@id/school_name"
+                android:layout_alignBottom="@id/tuijian_lv_img"
+              />
+                <TextView
+                    android:id="@+id/user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="50px"
+                    android:layout_alignBottom="@id/tuijian_lv_price"
+                    />
+
+    <ImageView
+        android:layout_width="30px"
+        android:layout_height="30px"
+        android:src="@mipmap/user_account_icon"
+        android:layout_alignBottom="@id/user"
+        android:layout_toLeftOf="@id/user"
+        android:id="@+id/imageView" />
+    <View
+        android:layout_marginTop="10px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray"/>
+</RelativeLayout>
