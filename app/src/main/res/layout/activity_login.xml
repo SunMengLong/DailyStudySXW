@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_background_color">
+
+    <include
+        layout="@layout/layout_common_header"></include>
+
+    <View
+        android:layout_marginTop="50px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/loading"
+        />
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/white"
+        android:paddingLeft="18px">
+        <EditText
+            android:id="@+id/tv_activity_login_phone"
+            android:drawableLeft="@mipmap/phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:inputType="text"
+            android:hint="   手机号/邮箱"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="38px"
+        android:background="#c9c9c9"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:paddingLeft="18px"
+        android:background="@color/white">
+        <EditText
+            android:id="@+id/tv_activity_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:drawableLeft="@mipmap/code"
+            android:inputType="text"
+            android:hint="   密码"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/loading"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_activity_login_info"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:paddingTop="30px"
+            android:paddingLeft="18px"
+            android:text=""
+            android:textColor="@color/red"/>
+
+        <TextView
+            android:id="@+id/tv_activity_login_forgetpassword"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="30px"
+            android:paddingRight="18px"
+            android:text="忘记密码?"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_activity_login"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginTop="147px"
+        android:layout_marginLeft="18px"
+        android:layout_marginRight="18px"
+        android:background="@mipmap/landb"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="36px"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/tv_activity_login_regist"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginTop="43px"
+        android:layout_marginLeft="18px"
+        android:layout_marginRight="18px"
+        android:background="@mipmap/login"
+        android:text="立即注册"
+        android:textColor="#f95d51"
+        android:textSize="36px"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_marginTop="100px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="70px"
+        android:paddingRight="70px">
+
+        <ImageView
+            android:id="@+id/iv_activity_login_qq"
+        android:layout_width="0px"
+        android:layout_height="140px"
+        android:layout_weight="1"
+        android:src="@mipmap/qq"/>
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="140px"
+            android:layout_weight="1"
+            android:src="@mipmap/wechat"/>
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="140px"
+            android:layout_weight="1"
+            android:src="@mipmap/weibo"/>
+    </LinearLayout>
+</LinearLayout>

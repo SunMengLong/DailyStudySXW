@@ -13,6 +13,11 @@
     <color name="common_background_color">#F2F2F2</color>
     <color name="twolist_item_check">#e7e7e7</color>
     <color name="red">#F95D51</color>
+    <color name="orange">#ff9c00</color>
+    <color name="green1">#7dcd43</color>
+    <color name="red1">#f95d51</color>
+    <color name="blue1">#34b3ee</color>
+    <color name="purple">#90369a</color>
     <color name="go_comment_backgroud">#33CCCC</color>
     <color name="blue">#0000ff</color>
     <color name="transparent">#00000000</color>
