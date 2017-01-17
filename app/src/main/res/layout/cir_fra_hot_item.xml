@@ -62,7 +62,7 @@
         android:id="@+id/cir_fra_hot_item_twoimg_lin"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="40px">
+        android:layout_height="400px">
         <ImageView
             android:id="@+id/cir_fra_hot_item_twoimg_img1"
             android:src="@mipmap/ic_launcher"

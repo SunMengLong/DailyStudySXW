@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.explem.aidl.dailystudysxw.base.BaseFragment;
 import com.explem.aidl.dailystudysxw.http.httpBoolean;
 import com.explem.aidl.dailystudysxw.interfaces.ReShowingListener;
+import com.explem.aidl.dailystudysxw.utils.BaseDate;
 import com.explem.aidl.dailystudysxw.view.ShowingPage;
 
 /**
@@ -58,6 +59,23 @@ public class CircleFollowicFragment extends BaseFragment{
         TextView tv=new TextView(getActivity());
         tv.setText("我是  关注   界面......");
         tv.setTextSize(25);
+        //请求网络
+        getNet();
         return tv;
+    }
+
+    private void getNet() {
+        BaseDate baseData=new BaseDate() {
+            @Override
+            protected void setResultError(ShowingPage.StateType stateLoadError) {
+
+            }
+
+            @Override
+            public void setResultData(String data) {
+
+            }
+        };
+        baseData.getDate(true, false, "http://www.meirixue.com/", "api.php?c=login&a=index", 100, BaseDate.NOTIME, BaseDate.postData,null);
     }
 }

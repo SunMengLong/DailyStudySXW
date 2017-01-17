@@ -41,6 +41,7 @@ import java.util.HashMap;
  */
 
 public class Home_Fragment extends BaseFragment implements SpringView.OnFreshListener, View.OnClickListener {
+    public boolean loadingTag=false;
     private PopupWindow pop;
     private TextView tv;
     private int main_tag = 0;
@@ -86,6 +87,8 @@ public class Home_Fragment extends BaseFragment implements SpringView.OnFreshLis
             sendEmptyMessageDelayed(0, 5000);
         }
     };
+
+
     //解析数据
     Handler mHandler = new Handler() {
         @Override
@@ -152,11 +155,27 @@ public class Home_Fragment extends BaseFragment implements SpringView.OnFreshLis
     };
     private ImageView first_img;
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        loadingTag=true;
+    }
 
     @Override
     protected void onload() {
         //设置为成功界面
-        Home_Fragment.this.showCurrentPage(ShowingPage.StateType.STATE_LOAD_SUCCESS);
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Home_Fragment.this.showCurrentPage(ShowingPage.StateType.STATE_LOAD_SUCCESS);
+            }
+        }.start();
+        //显示正在加载界面
     }
 
     //请求成功加载布局

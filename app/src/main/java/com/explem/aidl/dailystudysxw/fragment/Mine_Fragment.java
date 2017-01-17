@@ -2,16 +2,15 @@ package com.explem.aidl.dailystudysxw.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import com.explem.aidl.dailystudysxw.application.MyApplication;
+
 import com.explem.aidl.dailystudysxw.R;
+import com.explem.aidl.dailystudysxw.application.MyApplication;
 import com.explem.aidl.dailystudysxw.base.BaseFragment;
 import com.explem.aidl.dailystudysxw.login_regist.LoginActivity;
 import com.explem.aidl.dailystudysxw.utils.JumpUtils;
 import com.explem.aidl.dailystudysxw.utils.LogUtils;
+import com.explem.aidl.dailystudysxw.view.ShowingPage;
 
 /**
  * Created by Pooh on 2017/1/10.
@@ -19,41 +18,34 @@ import com.explem.aidl.dailystudysxw.utils.LogUtils;
 
 public class Mine_Fragment extends BaseFragment implements View.OnClickListener {
 
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_mine,null);
-
-        return view;
-    }
+    private View view;
 
     @Override
     protected void onload() {
-
+        Mine_Fragment.this.showCurrentPage(ShowingPage.StateType.STATE_LOAD_SUCCESS);
     }
 
     @Override
     protected View createSuccessView() {
-        TextView tv = new TextView(getActivity());
-        tv.setText("这个是”我的“界面！");
-        tv.setTextSize(20);
+        view = View.inflate(getContext(), R.layout.fragment_mine,null);
+        initView();
         //请求网络的数据
         //initData();
         MyApplication.direction2 = 2;
-        return tv;
+        return view;
     }
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
     }
 
     private void initView() {
-        getActivity().findViewById(R.id.autoll_fragment_mine_top).setOnClickListener(this);
-        getActivity().findViewById(R.id.autoll_fragment_mine_mycourse).setOnClickListener(this);
-        getActivity().findViewById(R.id.autoll_fragment_mine_collections).setOnClickListener(this);
-        getActivity().findViewById(R.id.autoll_fragment_mine_coupon).setOnClickListener(this);
-        getActivity().findViewById(R.id.autoll_fragment_mine_message).setOnClickListener(this);
-        getActivity().findViewById(R.id.autoll_fragment_mine_feedback).setOnClickListener(this);
-        getActivity().findViewById(R.id.autoll_fragment_mine_setting).setOnClickListener(this);
+        view.findViewById(R.id.autoll_fragment_mine_top).setOnClickListener(this);
+        view.findViewById(R.id.autoll_fragment_mine_mycourse).setOnClickListener(this);
+        view.findViewById(R.id.autoll_fragment_mine_collections).setOnClickListener(this);
+        view.findViewById(R.id.autoll_fragment_mine_coupon).setOnClickListener(this);
+        view.findViewById(R.id.autoll_fragment_mine_message).setOnClickListener(this);
+        view.findViewById(R.id.autoll_fragment_mine_feedback).setOnClickListener(this);
+        view.findViewById(R.id.autoll_fragment_mine_setting).setOnClickListener(this);
     }
 
     @Override
