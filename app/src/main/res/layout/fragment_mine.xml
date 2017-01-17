@@ -28,6 +28,7 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/civ_fragment_mine_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="95px"
@@ -68,14 +69,14 @@
         </com.zhy.autolayout.AutoLinearLayout>
 
         <!--登录以后-->
-        <RelativeLayout
+        <com.zhy.autolayout.AutoRelativeLayout
 
             android:id="@+id/rl_my_logedin_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical">
             <TextView
-                android:id="@+id/tv_my_logedin"
+                android:id="@+id/tv_fragment_mine_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20px"
@@ -93,7 +94,58 @@
                 android:layout_marginRight="9px"
                 android:paddingRight="10px"
                 android:src="@mipmap/myrig"/>
-        </RelativeLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50px"
+                android:layout_marginLeft="20px"
+                android:layout_below="@id/tv_fragment_mine_name">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="动态"
+                    android:textSize="24px"
+                    android:textColor="#ffffff"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="0"
+                    android:textSize="24px"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50px"
+                    android:text="话题"
+                    android:textSize="24px"
+                    android:textColor="#ffffff"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="0"
+                    android:textSize="24px"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50px"
+                    android:text="好友"
+                    android:textSize="24px"
+                    android:textColor="#ffffff"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="0"
+                    android:textSize="24px"
+                    android:textColor="#ffffff"/>
+            </com.zhy.autolayout.AutoLinearLayout>
+        </com.zhy.autolayout.AutoRelativeLayout>
     </com.zhy.autolayout.AutoLinearLayout>
 
 
@@ -124,8 +176,7 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginLeft="38px"
-        android:background="#c9c9c9"
-        />
+        android:background="#c9c9c9"/>
 
     <com.zhy.autolayout.AutoLinearLayout
         android:id="@+id/autoll_fragment_mine_collections"
@@ -153,8 +204,7 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginLeft="38px"
-        android:background="#c9c9c9"
-        />
+        android:background="#c9c9c9"/>
 
     <com.zhy.autolayout.AutoLinearLayout
         android:id="@+id/autoll_fragment_mine_coupon"
@@ -182,8 +232,7 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginLeft="38px"
-        android:background="#c9c9c9"
-        />
+        android:background="#c9c9c9"/>
 
     <com.zhy.autolayout.AutoLinearLayout
         android:id="@+id/autoll_fragment_mine_message"
@@ -211,8 +260,7 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginLeft="38px"
-        android:background="#c9c9c9"
-        />
+        android:background="#c9c9c9"/>
 
     <com.zhy.autolayout.AutoLinearLayout
         android:id="@+id/autoll_fragment_mine_feedback"
@@ -271,5 +319,4 @@
         android:layout_marginLeft="38px"
         android:background="#c9c9c9"
         />
-
 </com.zhy.autolayout.AutoLinearLayout>

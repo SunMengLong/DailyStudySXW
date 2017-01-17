@@ -5,17 +5,18 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 
-    <!--武斌斌权限-->
-    <uses-permission android:name="android.permission.READ_SMS"></uses-permission>
+    <!-- 武斌斌权限 -->
+    <uses-permission android:name="android.permission.READ_SMS"/>
 
     <application
         android:name=".application.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <!--洪阳的屏幕适配-->
+
+        <!-- 洪阳的屏幕适配 -->
         <meta-data
             android:name="design_width"
             android:value="768"/>
@@ -25,20 +26,26 @@
         <!-- Glid加载图片 -->
         <meta-data
             android:name="com.explem.aidl.dailystudysxw.utils.GlideModelConfig"
-            android:value="GlideModule" />
+            android:value="GlideModule"/>
 
         <activity android:name=".GuideActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".base.BaseActivity"/>
         <activity android:name=".login_regist.LoginActivity">
         </activity>
         <activity android:name=".login_regist.RegistActivity">
+        </activity>
+        <activity android:name=".login_regist.UserInfoActivity">
+        </activity>
+        <activity android:name=".login_regist.Find_Psw_Activity">
+        </activity>
+        <activity android:name=".login_regist.Find_Psw_Mail_Activity">
         </activity>
     </application>
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="88px">
 
     <com.zhy.autolayout.AutoRelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="88px"
+        android:layout_height="80px"
         android:orientation="horizontal"
         android:background="#f95d51">
         <ImageView
@@ -37,4 +37,4 @@
             android:src="@mipmap/glass"/>
     </com.zhy.autolayout.AutoRelativeLayout>
 
-</LinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>
