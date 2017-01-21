@@ -69,7 +69,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
 
             case R.id.tv_activity_login_forgetpassword://忘记密码
-
+                JumpUtils.jumpOnly(this,Find_Psw_Activity.class);
                 break;
 
             case R.id.iv_common_header_back://忘记密码
@@ -79,15 +79,18 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     }
 
     private void login() {
+
+        String phone = tv_activity_login_phone.getText().toString().trim();
+        String password = tv_activity_login_password.getText().toString().trim();
+
         HashMap<String, String> map = new HashMap<>();
         //用户名及密码
-        map.put("userName", tv_activity_login_phone.getText().toString().trim());
-        map.put("password", tv_activity_login_password.getText().toString().trim());
+        map.put("userName", phone);
+        map.put("password", password);
         map.put("dosubmit", "1");
         new BaseDate() {
             @Override
             protected void setResultError(ShowingPage.StateType stateLoadError) {
-
             }
 
             @Override

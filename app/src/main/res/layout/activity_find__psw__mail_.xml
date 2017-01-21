@@ -20,14 +20,15 @@
         android:orientation="horizontal">
 
         <EditText
+            android:background="@null"
             android:id="@+id/my_mail_et"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:drawableLeft="@mipmap/mail"
-            android:drawablePadding="30px"
-            android:minHeight="40dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
+            android:drawablePadding="60px"
+            android:minHeight="80px"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
             android:singleLine="true"
             android:layout_weight="1"
             android:textColorHint="#cbcbcb"
@@ -40,6 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:paddingRight="20px"
             android:src="@mipmap/edit_name_3"/>
     </com.zhy.autolayout.AutoLinearLayout>
 
