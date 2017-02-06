@@ -60,7 +60,7 @@ public class CircleHotFragment extends BaseFragment{
         FragmentPagerAdapter fragmentPagerAdapter=new FragmentPagerAdapter(getChildFragmentManager()) {
             @Override
             public Fragment getItem(int position) {
-                return MyFragment.getFragment(circleHotTitleBean.getData().get(position).getTid());
+                return MyFragment.getFragment(circleHotTitleBean.getData().get(position).getTid(),MyFragment.hotDetail,1);
             }
 
             @Override
@@ -75,6 +75,7 @@ public class CircleHotFragment extends BaseFragment{
         };
         cir_fra_hot_vp.setAdapter(fragmentPagerAdapter);
         cir_fra_hot_tabLayout.setTabsFromPagerAdapter(fragmentPagerAdapter);
+        //与vp进行关联
         cir_fra_hot_tabLayout.setupWithViewPager(cir_fra_hot_vp);
 
     }

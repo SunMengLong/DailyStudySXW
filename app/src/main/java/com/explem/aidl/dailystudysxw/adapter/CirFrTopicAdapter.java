@@ -55,7 +55,7 @@ public class CirFrTopicAdapter extends RecyclerView.Adapter<CircleFragmentTopicH
         vv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cirTopicOnClick.setOnItemClick(position);
+                cirTopicOnClick.setOnItemClick(Integer.parseInt(list.get(position).getNid()));
             }
         });
         holder.cir_fra_recy_item_addimg.setOnClickListener(new View.OnClickListener() {

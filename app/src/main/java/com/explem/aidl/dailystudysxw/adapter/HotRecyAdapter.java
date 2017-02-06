@@ -101,7 +101,7 @@ public class HotRecyAdapter extends RecyclerView.Adapter<HotViewHolder>{
         Glide.with(context).load(list.get(position).getUser_small_log()).bitmapTransform(new BlurTransformation(context, 20), new CropCircleTransformation(context)).into(holder.cir_fra_hot_item_titleimg);
         //设置TextView数据
         holder.cir_fra_hot_item_titletv.setText(" "+list.get(position).getUser_name());
-        holder.cir_fra_hot_item_tv3.setText("#"+ list.get(position).getP_tids().substring(list.get(position).getP_tids().length()-10,list.get(position).getP_tids().length()-8)+"#");
+        holder.cir_fra_hot_item_tv3.setText("#"+ "星座"+"#");
         if(TextUtils.isEmpty(list.get(position).getP_leaderette())){
             holder.cir_fra_hot_item_tv2.setVisibility(View.GONE);
         }else {

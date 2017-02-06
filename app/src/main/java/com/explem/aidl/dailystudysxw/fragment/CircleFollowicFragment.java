@@ -2,6 +2,7 @@ package com.explem.aidl.dailystudysxw.fragment;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -68,12 +69,12 @@ public class CircleFollowicFragment extends BaseFragment{
         BaseDate baseData=new BaseDate() {
             @Override
             protected void setResultError(ShowingPage.StateType stateLoadError) {
-
+                Log.i("aaaaaa", "setResultError: ......"+stateLoadError);
             }
 
             @Override
             public void setResultData(String data) {
-
+                Log.i("aaaaaa", "setResultData: ......"+data);
             }
         };
         baseData.getDate(true, false, "http://www.meirixue.com/", "api.php?c=login&a=index", 100, BaseDate.NOTIME, BaseDate.postData,null);

@@ -5,6 +5,6 @@ package com.explem.aidl.dailystudysxw.interfaces;
  */
 
 public interface CirTopicOnClick {
-    public void setOnItemClick(int position);
+    public void setOnItemClick(int nid);
     public void setOnItemImgClick(int position);
 }

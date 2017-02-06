@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
+import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.explem.aidl.dailystudysxw.MyTopicDetail;
 import com.explem.aidl.dailystudysxw.R;
 import com.explem.aidl.dailystudysxw.adapter.HotRecyAdapter;
 import com.explem.aidl.dailystudysxw.bean.HotBean;
@@ -32,7 +34,7 @@ import java.util.List;
  * Created by Pooh on 2017/1/10.
  */
 
-public class MyFragment extends Fragment implements SpringView.OnFreshListener {
+public class MyFragment extends Fragment implements SpringView.OnFreshListener,AppBarLayout.OnOffsetChangedListener {
 
     private View vv;
     private String tag;
@@ -70,6 +72,11 @@ public class MyFragment extends Fragment implements SpringView.OnFreshListener {
     ArrayList<HotBean.DataBean> countList=new ArrayList<>();
     private HotRecyAdapter recyAdapter;
     private int typeHandler;
+    private int tagActivity;
+    private int position;
+    private String baseUrl;
+    private HashMap<String, String> map;
+    private String url;
 
     private void setDataRecy(ArrayList<HotBean.DataBean> list) {
         hot_myfragment_recy.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -89,6 +96,23 @@ public class MyFragment extends Fragment implements SpringView.OnFreshListener {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //得到传过来的数据
         tag = getArguments().getString("tag");
+        tagActivity = getArguments().getInt("tagActivity");
+        position = getArguments().getInt("position");
+
+        //判断是哪一个的Activity
+        map = new HashMap<>();
+        if(tagActivity==MyFragment.TopicDetail){
+            baseUrl = "http://www.meirixue.com";
+            url = "http://www.meirixue.com/api.php?c=circle&a=getCirclePostList";
+            map.put("nid",tag);
+            map.put("order",position+"");
+            map.put("page",1+"");
+        }else{
+            baseUrl= CirclrURL.circle_hot_baseUrl;
+            url=CirclrURL.circle_hot_url;
+            map.put("page",page+"");
+            map.put("tid",tag);
+        }
 
         //初始化布局
         vv = View.inflate(getActivity(), R.layout.hot_myfragment_view,null);
@@ -142,10 +166,7 @@ public class MyFragment extends Fragment implements SpringView.OnFreshListener {
 
         //请求网络数据
         //热门数据的请求post
-        final HashMap<String,String> map=new HashMap<>();
-        Log.i("aaaaaaaaaa", "setData: ....."+page);
-        map.put("page",page+"");
-        map.put("tid",tag);
+
         BaseDate baseData=new BaseDate() {
             @Override
             protected void setResultError(ShowingPage.StateType stateLoadError) {
@@ -161,13 +182,18 @@ public class MyFragment extends Fragment implements SpringView.OnFreshListener {
                 handler.sendMessage(msg);
             }
         };
-        baseData.getDate(false,true, CirclrURL.circle_hot_baseUrl,CirclrURL.circle_hot_url,Integer.parseInt(tag)+page, BaseDate.NOMALTIME,BaseDate.postData,map);
+        baseData.getDate(false,true, baseUrl,url,Integer.parseInt(tag)+page, BaseDate.NOMALTIME,BaseDate.postData,map);
     }
 
-    public static Fragment getFragment(String args){
+    //判断是哪一个Activity的Fragment
+    public static int TopicDetail=0;
+    public static int hotDetail=1;
+    public static Fragment getFragment(String args,int tag,int position){
         MyFragment myFragment=new MyFragment();
         Bundle bundler=new Bundle();
         bundler.putString("tag",args);
+        bundler.putInt("tagActivity",tag);
+        bundler.putInt("position",position);
         myFragment.setArguments(bundler);
         return myFragment;
     }
@@ -196,5 +222,50 @@ public class MyFragment extends Fragment implements SpringView.OnFreshListener {
         //隐藏头部
         hot_myfragment_spr.setType(SpringView.Type.FOLLOW);
         hot_myfragment_spr.onFinishFreshAndLoad();
+    }
+
+
+    @Override
+    public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+        hot_myfragment_spr.setEnable(verticalOffset == 0);
+    }
+
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+
+        /**
+         * 这段代码是为了解决springview 和tabBarLayout中嵌套时上下滚动冲突
+         */
+        if (isVisibleToUser && this.getContext() != null&& MyFragment.TopicDetail==tagActivity) {
+            //MyApplication application = (MyApplication) this.getContext().getApplicationContext();
+            MyTopicDetail fragmentActivity = (MyTopicDetail) getActivity();
+            if (fragmentActivity.appBarLayout != null) {
+                fragmentActivity.appBarLayout.addOnOffsetChangedListener(this);
+            } else if (isVisibleToUser && this.getContext() == null) {
+            //viewpager中第一页加载的太早,getContext还拿不到,做个延迟
+            new Handler().post(new Runnable() {
+
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    if (MyFragment.this.getContext() != null) {
+
+                        // MyApplication application = (MyApplication) TopicParticularsFragment.this.getContext().getApplicationContext();
+
+                        MyTopicDetail fragmentActivity = (MyTopicDetail) getActivity();
+                        if (fragmentActivity.appBarLayout != null) {
+                            fragmentActivity.appBarLayout.addOnOffsetChangedListener(MyFragment.this);
+                        }
+                    }
+                }
+            });
+        }
+    }
     }
 }

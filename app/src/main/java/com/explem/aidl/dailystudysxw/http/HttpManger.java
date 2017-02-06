@@ -40,7 +40,7 @@ public class HttpManger {
 
     public static void postMethod(boolean isReadCookie, boolean isSaveCookie,String baseUrl, String url, Map<String,String> map,final Callback<String> callback) {
 
-        Log.i("aaaaaaa", "onResponse: ......isReadCookie:"+isReadCookie+"isSaveCookie:"+isSaveCookie+"baseUrl:"+baseUrl+"url:"+url+"map:"+map.size());
+       // Log.i("aaaaaaa", "onResponse: ......isReadCookie:"+isReadCookie+"isSaveCookie:"+isSaveCookie+"baseUrl:"+baseUrl+"url:"+url+"map:"+map.size());
 
         OkHttpClient httpClient = null;
         if (isReadCookie && !isSaveCookie) {

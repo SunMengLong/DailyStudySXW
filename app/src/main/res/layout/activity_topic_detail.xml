@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_topic_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="#F95D51"
+    >
+    <com.zhy.autolayout.AutoLinearLayout
+        android:background="#fff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:background="#F95D51"
+            android:layout_width="match_parent"
+            android:layout_height="120px">
+            <ImageView
+                android:id="@+id/detailBackImg"
+                android:layout_marginLeft="30px"
+                android:layout_gravity="center_vertical"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:src="@mipmap/jiantou1"
+                />
+            <TextView
+                android:gravity="center"
+                android:textSize="25sp"
+                android:text="学霸挑战"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textColor="#fff"/>
+            <ImageView
+                android:id="@+id/detailWriteImg"
+                android:layout_marginRight="30px"
+                android:layout_gravity="center_vertical"
+                android:layout_width="70px"
+                android:layout_height="70px"
+                android:src="@mipmap/write1"
+                />
+        </LinearLayout>
+
+
+        <android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true">
+
+                <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/collapsing_toolbar_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <include layout="@layout/topic_content_item" />
+
+                </android.support.design.widget.CollapsingToolbarLayout>
+            </android.support.design.widget.AppBarLayout>
+
+            <com.zhy.autolayout.AutoLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/top_Title_TabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabIndicatorColor="@color/red"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/red"
+                    app:tabTextAppearance="@style/TabLayoutTextStyle"
+                    app:tabTextColor="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#EEEEEE" />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/tooic_content_viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.zhy.autolayout.AutoLinearLayout>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoRelativeLayout>

@@ -1,6 +1,7 @@
 package com.explem.aidl.dailystudysxw.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.view.ViewPager;
@@ -13,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.explem.aidl.dailystudysxw.R;
+import com.explem.aidl.dailystudysxw.MyTopicDetail;
 import com.explem.aidl.dailystudysxw.adapter.CirFrTopicAdapter;
 import com.explem.aidl.dailystudysxw.base.BaseFragment;
 import com.explem.aidl.dailystudysxw.bean.CircleTopicBean;
@@ -201,10 +203,12 @@ public class CircleTopicFragment extends BaseFragment implements MyRoolViewPager
     private void initView() {
         //我的圈子的布局
         circle_fragment_topic_mylin = (LinearLayout) vv.findViewById(R.id.circle_fragment_topic_mylin);
+        //我的圈子
         circle_fragment_topic_recy1 = (RecyclerView) vv.findViewById(R.id.circle_fragment_topic_recy1);
 
         circle_fragment_topic_spring = (SpringView) vv.findViewById(R.id.circle_fragment_topic_spring);
         circle_fragment_topic_vp = (MyRoolViewPager) vv.findViewById(R.id.circle_fragment_topic_vp);
+        //热门圈子
         circle_fragment_topic_recy = (RecyclerView) vv.findViewById(R.id.circle_fragment_topic_recy);
         circle_fragment_topic_vp_lin = (LinearLayout) vv.findViewById(R.id.circle_fragment_topic_vp_lin);
         //设置ScollView显示顶部
@@ -218,7 +222,11 @@ public class CircleTopicFragment extends BaseFragment implements MyRoolViewPager
     //recy的条目点击事件
    @Override
     public void setOnItemClick(int position) {
-        Toast.makeText(getActivity(), "条目点击..."+position, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(), "条目点击..."+position, Toast.LENGTH_SHORT).show();
+       //跳转到详情的界面
+       Intent intent=new Intent(getActivity(), MyTopicDetail.class);
+       intent.putExtra("nid",position);
+       startActivity(intent);
     }
     //recy的条目中“加”图片的点击事件
     @Override
