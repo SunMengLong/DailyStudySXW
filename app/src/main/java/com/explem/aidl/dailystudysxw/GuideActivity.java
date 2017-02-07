@@ -19,8 +19,6 @@ import com.explem.aidl.dailystudysxw.fragment.Guide_Fragment3;
 
 import java.util.ArrayList;
 
-import static com.explem.aidl.dailystudysxw.R.id.Guide_img;
-
 public class GuideActivity extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor edit;
@@ -64,7 +62,8 @@ public class GuideActivity extends AppCompatActivity {
                        });
                        break;
                 case 1:
-                    guide_img.setImageResource(R.mipmap.guild8);
+                    guide_img.setScaleType(ImageView.ScaleType.FIT_XY);
+                    guide_img.setImageResource(R.mipmap.start1);
                     //第二次睡2秒直接跳入MainActivity
                     getTiao();
                     guide_img.setOnClickListener(new View.OnClickListener() {
@@ -114,7 +113,7 @@ public class GuideActivity extends AppCompatActivity {
     private void initView() {
         getData();
         guide_vp = (ViewPager) findViewById(R.id.Guide_vp);
-        guide_img = (ImageView) findViewById(Guide_img);
+        guide_img = (ImageView) findViewById(R.id.Guide_img);
         sharedPreferences = getSharedPreferences("isFirst",MODE_PRIVATE);
         boolean flag = sharedPreferences.getBoolean("flag", false);
         //第一次的登录

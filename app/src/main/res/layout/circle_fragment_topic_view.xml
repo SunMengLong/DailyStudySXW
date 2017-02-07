@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <com.liaoinstan.springview.widget.SpringView
+        android:id="@+id/circle_fragment_topic_spring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="400px">
+        <com.explem.aidl.dailystudysxw.view.MyRoolViewPager
+            android:id="@+id/circle_fragment_topic_vp"
+            android:layout_width="match_parent"
+            android:layout_height="400px">
+        </com.explem.aidl.dailystudysxw.view.MyRoolViewPager>
+            <LinearLayout
+                android:layout_marginBottom="15px"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:id="@+id/circle_fragment_topic_vp_lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/circle_fragment_topic_mylin"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="20px"
+                android:layout_marginLeft="30px"
+                android:layout_marginBottom="20px"
+                android:textSize="17sp"
+                android:textColor="#323232"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的圈子"/>
+            <android.support.v7.widget.RecyclerView
+                android:paddingLeft="30px"
+                android:id="@+id/circle_fragment_topic_recy1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+        <TextView
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="30px"
+            android:layout_marginBottom="20px"
+            android:textSize="17sp"
+            android:textColor="#323232"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热门圈子"/>
+        <android.support.v7.widget.RecyclerView
+            android:paddingLeft="30px"
+            android:id="@+id/circle_fragment_topic_recy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+</ScrollView>
+    </com.liaoinstan.springview.widget.SpringView>
+</LinearLayout>

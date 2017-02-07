@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20px"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_marginBottom="30px"
+        android:layout_marginTop="30px"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#ccc"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/cir_fra_recy_item_titleimg"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="200px"
+            android:layout_height="200px" />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/cir_fra_recy_item_hotimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/topic_hot"/>
+    </RelativeLayout>
+        <LinearLayout
+            android:paddingLeft="20px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/cir_fra_recy_item_tv1"
+                android:textSize="15sp"
+                android:textColor="#323232"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学霸挑战"/>
+            <TextView
+                android:id="@+id/cir_fra_recy_item_tv2"
+                android:textSize="13sp"
+                android:textColor="#323232"
+                android:paddingBottom="10px"
+                android:paddingTop="10px"
+                android:text="月v今代付款拿道具可参考"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/cir_fra_recy_item_tv3"
+                    android:textSize="13sp"
+                    android:textColor="#323232"
+                    android:paddingBottom="20px"
+                    android:paddingTop="20px"
+                    android:text="月v今代付"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/cir_fra_recy_item_tv4"
+                    android:layout_marginLeft="30px"
+                    android:textSize="13sp"
+                    android:textColor="#323232"
+                    android:paddingBottom="20px"
+                    android:paddingTop="20px"
+                    android:text="月v今代付"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/cir_fra_recy_item_addimg"
+            android:layout_marginLeft="50px"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/topic_focus"
+            android:layout_height="70px"
+            />
+    </RelativeLayout>
+</LinearLayout>

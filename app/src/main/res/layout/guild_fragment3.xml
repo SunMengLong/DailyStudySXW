@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <ImageView
-    android:id="@+id/Guide_fragment_img2"
+    android:id="@+id/Guide_fragment_img22"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:src="@mipmap/guide3"/>
+    android:scaleType="fitXY"
+    android:src="@mipmap/img3_jie000"/>
 
 </LinearLayout>

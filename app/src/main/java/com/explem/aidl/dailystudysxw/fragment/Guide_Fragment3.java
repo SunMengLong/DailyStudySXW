@@ -23,8 +23,8 @@ public class Guide_Fragment3 extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.guild_fragment3, null);
-        ImageView Guide_fragment_img2 = (ImageView) v.findViewById(R.id.Guide_fragment_img2);
-        Guide_fragment_img2.setOnClickListener(this);
+        ImageView guide_fragment_img2 = (ImageView) v.findViewById(R.id.Guide_fragment_img22);
+        guide_fragment_img2.setOnClickListener(this);
         return v;
     }
 

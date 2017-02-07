@@ -6,5 +6,7 @@
     android:id="@+id/Guide_fragment_img"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scaleType="fitXY"
+    android:src="@mipmap/img2_jie000"
     />
 </LinearLayout>

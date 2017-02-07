@@ -1,6 +1,5 @@
 package com.explem.aidl.dailystudysxw.fragment;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -35,10 +34,9 @@ public class Circle_Fragment extends Fragment implements RadioGroup.OnCheckedCha
         fragmentTransaction.commit();
         return vv;
     }
-
     private void initView() {
         circle_rg = (RadioGroup) vv.findViewById(R.id.circle_rg);
-        //改变监听
+        //改变的监听
         circle_rg.setOnCheckedChangeListener(this);
     }
 
@@ -47,10 +45,7 @@ public class Circle_Fragment extends Fragment implements RadioGroup.OnCheckedCha
         for (int j = 0; j < circle_rg.getChildCount(); j++) {
             RadioButton rb= (RadioButton) circle_rg.getChildAt(j);
             if(i==circle_rg.getChildAt(j).getId()){
-                rb.setTextColor(Color.RED);
                 CircleFagmentLiMian.setCur(j);
-            }else{
-                rb.setTextColor(Color.BLACK);
             }
         }
     }
@@ -60,9 +55,9 @@ public class Circle_Fragment extends Fragment implements RadioGroup.OnCheckedCha
         for (int j = 0; j < circle_rg.getChildCount(); j++) {
             RadioButton rb= (RadioButton) circle_rg.getChildAt(j);
             if(i==j){
-                rb.setTextColor(Color.RED);
+                rb.setChecked(true);
             }else{
-                rb.setTextColor(Color.BLACK);
+                rb.setChecked(false);
             }
         }
     }

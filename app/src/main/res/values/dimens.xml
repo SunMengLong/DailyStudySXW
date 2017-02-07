@@ -30,5 +30,6 @@
     <dimen name="home_fragment_titles">300px</dimen>
     <dimen name="home_fragment_titlesss">350px</dimen>
     <dimen name="home_fragment_titlessss">400px</dimen>
+    <dimen name="text_16_sp">18sp</dimen>
 
 </resources>

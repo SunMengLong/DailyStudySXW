@@ -28,9 +28,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         initView();
-
     }
 
     private void initView() {
@@ -45,7 +43,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         findViewById(R.id.iv_common_header_back).setOnClickListener(this);
         findViewById(R.id.tv_activity_login_forgetpassword).setOnClickListener(this);
         tv_common_header_title.setText("登录");
-
     }
 
     @Override

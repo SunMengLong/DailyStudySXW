@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.explem.aidl.dailystudysxw.application.MyApplication;
 import com.bumptech.glide.Glide;
 import com.explem.aidl.dailystudysxw.R;
 import com.explem.aidl.dailystudysxw.adapter.DirectorAdapter;
@@ -39,7 +40,8 @@ import java.util.HashMap;
  * Created by Pooh on 2017/1/10.
  */
 
-public class Home_Fragment extends BaseFragment implements SpringView.OnFreshListener {
+public class Home_Fragment extends BaseFragment implements SpringView.OnFreshListener, View.OnClickListener {
+    public boolean loadingTag=false;
     private PopupWindow pop;
     private TextView tv;
     private int main_tag = 0;
@@ -85,6 +87,8 @@ public class Home_Fragment extends BaseFragment implements SpringView.OnFreshLis
             sendEmptyMessageDelayed(0, 5000);
         }
     };
+
+
     //解析数据
     Handler mHandler = new Handler() {
         @Override
@@ -149,17 +153,38 @@ public class Home_Fragment extends BaseFragment implements SpringView.OnFreshLis
             Glide.with(getActivity()) .load(home_fragment_main.getData().getAdlist().get(2).getImg()) .into(bulb);
         }
     };
+    private ImageView first_img;
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        loadingTag=true;
+    }
 
     @Override
     protected void onload() {
         //设置为成功界面
-        Home_Fragment.this.showCurrentPage(ShowingPage.StateType.STATE_LOAD_SUCCESS);
+        new Thread() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                Home_Fragment.this.showCurrentPage(ShowingPage.StateType.STATE_LOAD_SUCCESS);
+            }
+        }.start();
+        //显示正在加载界面
     }
 
     //请求成功加载布局
     @Override
     protected View createSuccessView() {
+        //判断“圈子”界面将要显示的是哪一个界面
+        MyApplication.direction2=-1;
+
+         TextView tv=new TextView(getActivity());
         v = View.inflate(getActivity(), R.layout.home_fragment, null);
         initView();
         return v;
@@ -251,7 +276,7 @@ public class Home_Fragment extends BaseFragment implements SpringView.OnFreshLis
             public void run() {
                 super.run();
                 popView = View.inflate(getActivity(), R.layout.home_fragment_pop, null);
-                pop = new PopupWindow(popView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+                pop = new PopupWindow(popView, ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 pop.setOutsideTouchable(true);
                 pop.setBackgroundDrawable(new BitmapDrawable());
                 //使pop隐藏
@@ -283,5 +308,10 @@ public class Home_Fragment extends BaseFragment implements SpringView.OnFreshLis
     public void onPause() {
         super.onPause();
        h.removeCallbacksAndMessages(null);
+    }
+
+    @Override
+    public void onClick(View view) {
+        first_img.setVisibility(View.GONE);
     }
 }

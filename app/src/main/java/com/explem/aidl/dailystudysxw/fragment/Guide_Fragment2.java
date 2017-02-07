@@ -25,13 +25,11 @@ public class Guide_Fragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View inflate = inflater.inflate(R.layout.guild_fragment2, null);
         guide_fragment_img = (ImageView) inflate.findViewById(R.id.Guide_fragment_img);
-
+        //guide_fragment_img.setImageResource(R.mipmap.img2_jie);
         return inflate;
     }
     @Override
     public void onStart() {
         super.onStart();
-        guide_fragment_img.setImageResource(R.mipmap.guide2);
     }
-
 }

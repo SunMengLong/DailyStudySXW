@@ -24,6 +24,7 @@
             android:src="@mipmap/search" />
     </com.zhy.autolayout.AutoRelativeLayout>
 
+
     <com.liaoinstan.springview.widget.SpringView
         android:id="@+id/home_fragment_spring"
         android:layout_width="match_parent"
