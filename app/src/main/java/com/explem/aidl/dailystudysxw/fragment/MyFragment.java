@@ -19,6 +19,7 @@ import com.explem.aidl.dailystudysxw.adapter.HotRecyAdapter;
 import com.explem.aidl.dailystudysxw.bean.HotBean;
 import com.explem.aidl.dailystudysxw.utils.BaseDate;
 import com.explem.aidl.dailystudysxw.utils.CirclrURL;
+import com.explem.aidl.dailystudysxw.utils.LogUtils;
 import com.explem.aidl.dailystudysxw.view.ShowingPage;
 import com.google.gson.Gson;
 import com.liaoinstan.springview.container.DefaultFooter;
@@ -67,7 +68,7 @@ public class MyFragment extends Fragment implements SpringView.OnFreshListener,A
     };
     private List<HotBean.DataBean> data;
     private FloatingActionButton floatingActionButton;
-    private SpringView hot_myfragment_spr;
+    public SpringView hot_myfragment_spr;
     //刷新和加载更多的集合
     ArrayList<HotBean.DataBean> countList=new ArrayList<>();
     private HotRecyAdapter recyAdapter;
@@ -131,8 +132,13 @@ public class MyFragment extends Fragment implements SpringView.OnFreshListener,A
         hot_myfragment_spr.setType(SpringView.Type.FOLLOW);
         //设置监听
         hot_myfragment_spr.setListener(this);
-        //设置数据
+       //设置数据
+
+
         setData(first);
+        //设置MyTopicDetail中appBarLayout的监听事件
+        if(MyTopicDetail.appBarLayout!=null)
+        MyTopicDetail.appBarLayout.addOnOffsetChangedListener(this);
     }
 
     /**
@@ -226,8 +232,11 @@ public class MyFragment extends Fragment implements SpringView.OnFreshListener,A
 
 
     @Override
-    public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-        hot_myfragment_spr.setEnable(verticalOffset == 0);
+        public void onOffsetChanged(AppBarLayout appBarLayout, final int verticalOffset) {
+        LogUtils.e("SSSS","----"+verticalOffset);
+         hot_myfragment_spr.setEnable(verticalOffset == 0);
+
+
     }
 
 
@@ -250,7 +259,7 @@ public class MyFragment extends Fragment implements SpringView.OnFreshListener,A
                 @Override
                 public void run() {
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(2000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
