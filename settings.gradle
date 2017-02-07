@@ -1,1 +1,1 @@
-include ':app', ':springlibrary'
+include ':app', ':springlibrary', ':library'

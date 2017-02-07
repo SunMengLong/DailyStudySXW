@@ -47,6 +47,5 @@ public class SmsContentObserver extends ContentObserver {
             String code = matcher.group(0);
             handler.obtainMessage(0, code).sendToTarget();
         }
-
     }
 }

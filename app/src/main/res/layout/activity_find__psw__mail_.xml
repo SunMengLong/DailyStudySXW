@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_find__psw__mail_"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/layout_common_header"></include>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:background="@mipmap/edit_name_1"
+        android:layout_marginTop="80px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:background="@null"
+            android:id="@+id/my_mail_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/mail"
+            android:drawablePadding="40px"
+            android:minHeight="80px"
+            android:paddingLeft="20px"
+            android:paddingRight="20px"
+            android:singleLine="true"
+            android:textColorHint="#cbcbcb"
+            android:textColor="#333333"
+            android:textSize="32px"
+            android:hint="请输入注册邮箱" />
+
+        <ImageView
+            android:id="@+id/my_mali_find_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="20px"
+            android:src="@mipmap/edit_name_3"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <Button
+        android:id="@+id/my_mail_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="60px"
+        android:gravity="center"
+        android:paddingBottom="20px"
+        android:paddingTop="20px"
+        android:text="提交"
+        android:background="@mipmap/logobutton"
+        android:textColor="@color/white"
+        android:textSize="36px" />
+
+</com.zhy.autolayout.AutoLinearLayout>

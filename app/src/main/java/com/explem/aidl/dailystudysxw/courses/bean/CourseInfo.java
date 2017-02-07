@@ -32,7 +32,15 @@ public class CourseInfo {
         this.nodes = nodes;
     }
 
-    public static class NodesBean {
+    @Override
+    public String toString() {
+        return "CourseInfo{" +
+                "cname='" + cname + '\'' +
+                ", nodes=" + nodes +
+                '}';
+    }
+
+    public class NodesBean {
         /**
          * id : 44
          * category_name : 美妆美发
@@ -125,6 +133,21 @@ public class CourseInfo {
 
         public void setCategory_fiid(String category_fiid) {
             this.category_fiid = category_fiid;
+        }
+
+        @Override
+        public String toString() {
+            return "NodesBean{" +
+                    "id='" + id + '\'' +
+                    ", category_name='" + category_name + '\'' +
+                    ", category_fid='" + category_fid + '\'' +
+                    ", category_order='" + category_order + '\'' +
+                    ", category_status='" + category_status + '\'' +
+                    ", category_lever='" + category_lever + '\'' +
+                    ", category_p=" + category_p +
+                    ", category_ishot='" + category_ishot + '\'' +
+                    ", category_fiid='" + category_fiid + '\'' +
+                    '}';
         }
     }
 }

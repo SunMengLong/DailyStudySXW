@@ -66,4 +66,34 @@
         <item name="android:textSize">@dimen/text_16_sp</item>
     </style>
     
+    <!--武斌斌样式-->
+    <style name="Animation">
+        <item name="android:windowEnterAnimation">@anim/enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/out_anim</item>
+    </style>
+
+    <style name="setting_item_container_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/setting_linear_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/setting_item_bg_selector</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">@dimen/setting_linear_margin_horizontal</item>
+    </style>
+
+    <!-- togglebutton样式 -->
+    <style name="togglebtn_width_height">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@drawable/setting_checked_btn</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:checked">true</item>
+        <item name="android:textOff"></item>
+        <item name="android:textOn"></item>
+    </style>
+
+    <!--<style name="Base.Widget.Design.TabLayout1" parent="android:Widget">-->
+        <!--<item name="tabBackground">@drawable/tab_background_selector</item>-->
+    <!--</style>-->
+    
 </resources>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_common_header"></include>
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/arl_user_seticon"
+        android:layout_width="match_parent"
+        android:layout_height="228px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:text="更换头像"
+            android:textColor="#333333"
+            android:textSize="32px"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_user_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:src="@mipmap/boy"
+            app:civ_border_color="#33ffffff"
+            app:civ_border_width="4px"/>
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30px"
+            android:text="昵称"
+            android:textColor="#333333"
+            android:textSize="32px"/>
+
+        <TextView
+            android:id="@+id/tv_activity_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="30px"
+            android:gravity="right"
+            android:text="12345678901"
+            android:textColor="#999999"
+            android:textSize="26px"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:layout_marginTop="2px"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30px"
+            android:text="手机号码"
+            android:textColor="#333333"
+            android:textSize="32px"/>
+
+        <TextView
+            android:id="@+id/tv_activity_user_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="30px"
+            android:gravity="right"
+            android:text="12345678901"
+            android:textColor="#999999"
+            android:textSize="26px"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30px"
+            android:text="性别"
+            android:textColor="#333333"
+            android:textSize="32px"/>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="30px">
+
+            <RadioButton
+                android:id="@+id/rb_activity_user_boy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="60px"
+                android:button="@null"
+                android:drawableLeft="@drawable/boy_logo_activity_info"
+                android:checked="true"
+                android:text="  男生"
+                android:textColor="#999999"
+                android:textSize="35px"/>
+
+            <RadioButton
+                android:id="@+id/rb_activity_user_girl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:button="@null"
+                android:drawableLeft="@drawable/girl_logo_activity_info"
+                android:text="  女生"
+                android:textColor="#999999"
+                android:textSize="35px"/>
+        </RadioGroup>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:background="#dedede"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <Button
+            android:id="@+id/my_info_exit"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_width="fill_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50px"
+            android:layout_height="86px"
+            android:textColor="@color/red"
+            android:textSize="36px"
+            android:text="退出登录"/>
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

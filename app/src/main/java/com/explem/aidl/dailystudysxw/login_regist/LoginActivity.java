@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.explem.aidl.dailystudysxw.R;
 import com.explem.aidl.dailystudysxw.base.BaseActivity;
 import com.explem.aidl.dailystudysxw.cookie.SharedPreferencesUtils;
+import com.explem.aidl.dailystudysxw.login_regist.bean.BackInfo;
 import com.explem.aidl.dailystudysxw.utils.BaseDate;
 import com.explem.aidl.dailystudysxw.utils.JumpUtils;
 import com.explem.aidl.dailystudysxw.utils.LogUtils;
@@ -60,25 +61,28 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
 
             case R.id.tv_activity_login_forgetpassword://忘记密码
-
+                JumpUtils.jumpOnly(this,Find_Psw_Activity.class);
                 break;
 
-            case R.id.iv_common_header_back://忘记密码
+            case R.id.iv_common_header_back://返回
                 finish();
                 break;
         }
     }
 
     private void login() {
+
+        String phone = tv_activity_login_phone.getText().toString().trim();
+        String password = tv_activity_login_password.getText().toString().trim();
+
         HashMap<String, String> map = new HashMap<>();
         //用户名及密码
-        map.put("userName", tv_activity_login_phone.getText().toString().trim());
-        map.put("password", tv_activity_login_password.getText().toString().trim());
+        map.put("userName", phone);
+        map.put("password", password);
         map.put("dosubmit", "1");
         new BaseDate() {
             @Override
             protected void setResultError(ShowingPage.StateType stateLoadError) {
-
             }
 
             @Override
@@ -96,6 +100,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     SharedPreferencesUtils.saveString(LoginActivity.this,"phone",backInfo.getData().getUser_phone());
                     SharedPreferencesUtils.saveString(LoginActivity.this,"name",backInfo.getData().getUser_name());
                     SharedPreferencesUtils.saveString(LoginActivity.this,"sex",backInfo.getData().getUser_sex());
+                    SharedPreferencesUtils.saveString(LoginActivity.this,"img",backInfo.getData().getUser_middle_log());
                     finish();
                 }
                 LogUtils.i("login", "------" + data);

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_setting"
+    android:orientation="vertical"
+    android:background="@color/common_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/layout_common_header"></include>
+    
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:layout_marginTop="76px"
+        android:background="@drawable/setting_linear_border"
+        >
+        
+        <TextView
+            style="@style/setting_item_textview_style"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="仅wifi观看"
+            android:paddingLeft="@dimen/setting_linear_margin_horizontal"/>
+
+        <ToggleButton
+            style="@style/togglebtn_width_height"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/setting_linear_margin_big"
+        android:background="@drawable/setting_linear_border"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/setting_linear_margin_horizontal"
+        android:divider="@drawable/shape_divider_linear"
+        android:showDividers="middle" >
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/setting_clear"
+            style="@style/setting_item_container_style"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                style="@style/setting_item_textview_style"
+                android:text="清理缓存" />
+
+            <TextView
+                android:id="@+id/setting_textview_cachesize"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:text="3.12M"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/setting_text_size_info" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/setting_update"
+            style="@style/setting_item_container_style"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                style="@style/setting_item_textview_style"
+                android:text="检查更新" />
+
+            <TextView
+                android:id="@+id/tv_current_version"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:text="V3.0.3"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/setting_text_size_info" />
+        </com.zhy.autolayout.AutoLinearLayout>
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:id="@+id/setting_about"
+            style="@style/setting_item_container_style"
+            android:clickable="true" >
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                style="@style/setting_item_textview_style"
+                android:text="关于我们" />
+
+            <ImageView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:src="@mipmap/myrig" />
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+    
+
+</com.zhy.autolayout.AutoLinearLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_regist"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_common_header"></include>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="50px"
+        android:background="@color/loading"
+        />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:gravity="center">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0px"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingLeft="18px">
+            <EditText
+                android:id="@+id/tv_activity_regist_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:drawableLeft="@mipmap/phone"
+                android:drawablePadding="30px"
+                android:hint="手机号"
+                android:inputType="text"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="10px">
+
+            <TextView
+                android:id="@+id/tv_activity_findpsw_getcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="发送验证码"
+                android:textColor="#67d2b7"
+                android:textSize="35px"
+                android:gravity="center"/>
+        </android.support.v7.widget.CardView>
+
+
+    </com.zhy.autolayout.AutoLinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="38px"
+        android:background="#c9c9c9"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/white"
+        android:paddingLeft="18px">
+
+        <EditText
+            android:id="@+id/tv_activity_regist_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:drawableLeft="@mipmap/numb"
+            android:drawablePadding="30px"
+            android:hint="6位验证码"
+            android:inputType="text"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="38px"
+        android:background="#c9c9c9"
+        />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="88px"
+        android:background="@color/white"
+        android:paddingLeft="18px">
+
+        <EditText
+            android:id="@+id/tv_activity_regist_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingRight="18px"
+            android:drawableLeft="@mipmap/code"
+            android:drawablePadding="30px"
+            android:hint="设置密码"
+            android:inputType="textPassword"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/loading"/>
+
+    <TextView
+        android:id="@+id/tv_findpsw_hintinfo"
+        android:layout_marginTop="10px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18px"
+        android:textColor="@color/red"/>
+
+    <TextView
+        android:id="@+id/tv_activity_regist_submit"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginLeft="18px"
+        android:layout_marginRight="18px"
+        android:layout_marginTop="147px"
+        android:background="@mipmap/logobutton"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="36px"/>
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_find_psw_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:text="邮箱注册？点击找回"
+            android:textColor="#666666"
+            android:textSize="13sp"/>
+    </com.zhy.autolayout.AutoLinearLayout>
+</com.zhy.autolayout.AutoLinearLayout>

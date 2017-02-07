@@ -32,4 +32,21 @@ public class LogUtils {
         if (isDebug)
             Toast.makeText(context, s, Toast.LENGTH_SHORT).show();
     }
+
+    public static Toast toast;
+
+    /**
+     * 能够连续弹吐司，不用等上个消失
+     *
+     * @param context
+     * @param string
+     */
+    public static void showToastA(Context context, String string) {
+        if (toast == null) {
+            toast = Toast.makeText(context, string, Toast.LENGTH_LONG);
+        }
+        toast.setText(string);
+        if (isDebug)
+            toast.show();
+    }
 }

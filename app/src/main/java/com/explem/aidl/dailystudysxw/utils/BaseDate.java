@@ -32,7 +32,7 @@ public abstract class BaseDate {
     public static int getData=200;
 
 
-    private final File cacheDir;
+    public static File cacheDir;
 
     public BaseDate(){
         //存到那里去？

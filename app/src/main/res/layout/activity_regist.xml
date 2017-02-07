@@ -35,7 +35,8 @@
                 android:layout_height="match_parent"
                 android:background="@color/white"
                 android:drawableLeft="@mipmap/phone"
-                android:hint="   手机号（即账号）"
+                android:drawablePadding="20px"
+                android:hint="手机号（即账号）"
                 android:inputType="text"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -80,7 +81,8 @@
             android:layout_height="match_parent"
             android:background="@color/white"
             android:drawableLeft="@mipmap/numb"
-            android:hint="   6位验证码"
+            android:drawablePadding="20px"
+            android:hint="6位验证码"
             android:inputType="text"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -104,7 +106,8 @@
             android:background="@color/white"
             android:paddingRight="18px"
             android:drawableLeft="@mipmap/code"
-            android:hint="   设置密码"
+            android:drawablePadding="20px"
+            android:hint="设置密码"
             android:inputType="textPassword"/>
     </android.support.design.widget.TextInputLayout>
 
@@ -112,6 +115,13 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:background="@color/loading"/>
+    <TextView
+        android:id="@+id/tv_regist_hintinfo"
+        android:layout_marginTop="10px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18px"
+        android:textColor="@color/red"/>
 
     <TextView
         android:id="@+id/tv_activity_regist"
@@ -122,7 +132,7 @@
         android:layout_marginTop="147px"
         android:background="@mipmap/logobutton"
         android:gravity="center"
-        android:text="注册"
+        android:text="提交"
         android:textColor="@color/white"
         android:textSize="36px"/>
 

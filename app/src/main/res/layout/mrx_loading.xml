@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/progressbar_change_photo"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/load_anim3"
+            android:indeterminateDuration="1500" />
+
+        <TextView
+            android:id="@+id/id_tv_loadingmsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16px"
+            android:text="正在加载中..."
+            android:textColor="@color/loading"
+            android:textSize="28px" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</FrameLayout>
