@@ -1,4 +1,4 @@
-package com.explem.aidl.dailystudysxw.user.fragments;
+package com.explem.aidl.dailystudysxw.user;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -13,7 +13,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,7 +25,6 @@ import com.bumptech.glide.Glide;
 import com.explem.aidl.dailystudysxw.R;
 import com.explem.aidl.dailystudysxw.login_regist.LoginActivity;
 import com.explem.aidl.dailystudysxw.login_regist.bean.CookieBack;
-import com.explem.aidl.dailystudysxw.user.UserCourseActivity;
 import com.explem.aidl.dailystudysxw.utils.BaseDate;
 import com.explem.aidl.dailystudysxw.utils.JumpUtils;
 import com.explem.aidl.dailystudysxw.utils.LogUtils;
@@ -39,10 +37,6 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import butterknife.OnClick;
-
-import static android.R.attr.id;
-import static android.R.id.text1;
 
 /**
  * Created by Administrator on 2017/1/29 0029.
