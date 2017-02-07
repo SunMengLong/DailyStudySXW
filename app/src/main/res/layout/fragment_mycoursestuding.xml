@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:visibility="gone"
+        android:id="@+id/frame_loading"
+        layout="@layout/mrx_loading" />
+
+    <FrameLayout
+        android:id="@+id/framelayout_mycoursestuding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/linear_mycoursestuding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_mycoursestuding_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingTop="8dp"
+                android:gravity="center_vertical"
+                android:text="正在学习2门课程"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+            <com.baoyz.swipemenulistview.SwipeMenuListView
+                android:id="@+id/listview_fragment_studing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <include
+        android:id="@+id/framelayout_mycoursestuding_no"
+        layout="@layout/errorfragment_mycourse_empty" />
+
+</LinearLayout>

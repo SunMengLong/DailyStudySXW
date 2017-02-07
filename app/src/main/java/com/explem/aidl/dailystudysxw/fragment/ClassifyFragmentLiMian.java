@@ -49,14 +49,12 @@ public class ClassifyFragmentLiMian extends BaseFragment {
             super.handleMessage(msg);
 
             List<CourseInfo> infos = (List<CourseInfo>) msg.obj;
-//            LogUtils.i("course", "@@@@@@@@@@@@!!!!"+infos.size());
             final Fragment_Course_Expand_Adapter adapter = new Fragment_Course_Expand_Adapter(getActivity(), infos);
             expand_fragment_course.setGroupIndicator(null);
             expand_fragment_course.setAdapter(adapter);
             expand_fragment_course.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
                 @Override
                 public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
-//                adapter.setSelectedItem(groupPosition);
                     if (!parent.isGroupExpanded(groupPosition)) {
                         adapter.setHide(true, groupPosition);
                     } else {
@@ -65,7 +63,7 @@ public class ClassifyFragmentLiMian extends BaseFragment {
                     return false;
                 }
             });
-            //同时只有一个group是打开状态
+            //控制同时只有一个group是打开状态
             expand_fragment_course.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
                 @Override
                 public void onGroupExpand(int groupPosition) {
@@ -87,12 +85,10 @@ public class ClassifyFragmentLiMian extends BaseFragment {
             ClassifyFragmentLiMian.this.showCurrentPage(ShowingPage.StateType.STATE_LOAD_ERROR);
         } else {
             //设置为成功界面
-            LogUtils.i("course", "连接网络442");
+//            LogUtils.i("course", "连接网络442");
 
             CourseBaseData baseData = new CourseBaseData();
-            baseData.getDate(true,true,baseUrl, sort, 0, BaseDate.NOTIME, BaseDate.getData, null);
-
-//            ClassifyFragmentLiMian.this.showCurrentPage(ShowingPage.StateType.STATE_LOAD_SUCCESS);
+            baseData.getDate(false,false,baseUrl, sort, 0, BaseDate.NOTIME, BaseDate.getData, null);
         }
         //对showingpager作出监听
         showingPage.setShowingPagerListener(new ReShowingListener() {
@@ -133,9 +129,8 @@ public class ClassifyFragmentLiMian extends BaseFragment {
             Message message = handler.obtainMessage();
             message.obj = courseInfo;
             message.sendToTarget();
-//            LogUtils.i("course", courseInfo.size()+"@@@@@@@@@@@@");
+            LogUtils.i("course", courseInfo.toString()+"@@@@@@@@@@@@");
             ClassifyFragmentLiMian.this.showCurrentPage(ShowingPage.StateType.STATE_LOAD_SUCCESS);
         }
     }
-
 }

@@ -164,6 +164,7 @@
             android:src="@mipmap/mya"/>
 
         <TextView
+            android:id="@+id/tv_fragment_mine_mycourse"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="22px"
@@ -192,6 +193,7 @@
             android:src="@mipmap/myb"/>
 
         <TextView
+            android:id="@+id/tv_fragment_mine_collections"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="22px"

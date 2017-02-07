@@ -1,7 +1,5 @@
 package com.explem.aidl.dailystudysxw.login_regist;
 
-import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -11,6 +9,7 @@ import android.widget.Toast;
 import com.explem.aidl.dailystudysxw.R;
 import com.explem.aidl.dailystudysxw.base.BaseActivity;
 import com.explem.aidl.dailystudysxw.cookie.SharedPreferencesUtils;
+import com.explem.aidl.dailystudysxw.login_regist.bean.BackInfo;
 import com.explem.aidl.dailystudysxw.utils.BaseDate;
 import com.explem.aidl.dailystudysxw.utils.JumpUtils;
 import com.explem.aidl.dailystudysxw.utils.LogUtils;
@@ -18,10 +17,6 @@ import com.explem.aidl.dailystudysxw.view.ShowingPage;
 import com.google.gson.Gson;
 
 import java.util.HashMap;
-import java.util.prefs.Preferences;
-
-import static com.explem.aidl.dailystudysxw.R.id.tv_activity_login;
-import static com.explem.aidl.dailystudysxw.R.id.tv_activity_login_info;
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
 
@@ -72,7 +67,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 JumpUtils.jumpOnly(this,Find_Psw_Activity.class);
                 break;
 
-            case R.id.iv_common_header_back://忘记密码
+            case R.id.iv_common_header_back://返回
                 finish();
                 break;
         }
@@ -108,6 +103,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                     SharedPreferencesUtils.saveString(LoginActivity.this,"phone",backInfo.getData().getUser_phone());
                     SharedPreferencesUtils.saveString(LoginActivity.this,"name",backInfo.getData().getUser_name());
                     SharedPreferencesUtils.saveString(LoginActivity.this,"sex",backInfo.getData().getUser_sex());
+                    SharedPreferencesUtils.saveString(LoginActivity.this,"img",backInfo.getData().getUser_middle_log());
                     finish();
                 }
                 LogUtils.i("login", "------" + data);

@@ -1,12 +1,10 @@
-package com.explem.aidl.dailystudysxw.login_regist;
+package com.explem.aidl.dailystudysxw.login_regist.bean;
 
 /**
  * Created by Administrator on 2017/1/16 0016.
  */
 
 public class BackInfo {
-
-
     /**
      * data : {"ischange":"0","user_big_log":"http://www.meirixue.com/assets/home/images/avatar_set-big.jpg","user_ctime":"1484292890","user_id":"49977","user_middle_log":"http://www.meirixue.com/assets/home/images/avatar_set-medium.jpg","user_name":"15801308131","user_phone":"15801308131","user_sex":"1","user_small_log":"http://www.meirixue.com/assets/home/images/avatar_set-small.jpg"}
      * msg : 登录成功
@@ -41,7 +39,7 @@ public class BackInfo {
         this.status = status;
     }
 
-    public static class DataBean {
+    public class DataBean {
         /**
          * ischange : 0
          * user_big_log : http://www.meirixue.com/assets/home/images/avatar_set-big.jpg

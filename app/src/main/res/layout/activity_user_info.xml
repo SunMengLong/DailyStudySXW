@@ -13,6 +13,7 @@
         layout="@layout/layout_common_header"></include>
 
     <com.zhy.autolayout.AutoRelativeLayout
+        android:id="@+id/arl_user_seticon"
         android:layout_width="match_parent"
         android:layout_height="228px">
 
@@ -26,6 +27,7 @@
             android:textSize="32px"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_user_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -51,6 +53,7 @@
             android:textSize="32px"/>
 
         <TextView
+            android:id="@+id/tv_activity_user_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -77,6 +80,7 @@
             android:textSize="32px"/>
 
         <TextView
+            android:id="@+id/tv_activity_user_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -111,7 +115,7 @@
             android:paddingRight="30px">
 
             <RadioButton
-                android:id="@+id/rb0"
+                android:id="@+id/rb_activity_user_boy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
@@ -124,7 +128,7 @@
                 android:textSize="35px"/>
 
             <RadioButton
-                android:id="@+id/rb1"
+                android:id="@+id/rb_activity_user_girl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
