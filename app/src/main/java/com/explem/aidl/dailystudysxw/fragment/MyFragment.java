@@ -136,6 +136,7 @@ public class MyFragment extends Fragment implements SpringView.OnFreshListener,A
 
 
         setData(first);
+//        这段代码是为了解决springview 和tabBarLayout中嵌套时上下滚动冲突
         //设置MyTopicDetail中appBarLayout的监听事件
         if(MyTopicDetail.appBarLayout!=null)
         MyTopicDetail.appBarLayout.addOnOffsetChangedListener(this);
